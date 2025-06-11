@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Environment Highlighter",
+  "version": "1.0",
+  "description": "Highlights current environment visually.",
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://revplan.ideasrms.com/*",
+    "https://revplan.stage.ideasrms.com/*",
+    "https://revplan.dev.ideasrms.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://revplan.ideasrms.com/*",
+        "https://revplan.stage.ideasrms.com/*",
+        "https://revplan.dev.ideasrms.com/*"
+      ],
+      "js": [
+        "env-highlighter.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
