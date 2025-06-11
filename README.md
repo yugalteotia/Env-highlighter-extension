@@ -26,7 +26,7 @@ A lightweight Chrome extension that visually distinguishes between environments 
 
 ## 📦 How to Install Locally
 
-1. Clone or download this repository.
+1. Clone or download [this](https://github.com/yugalteotia/Env-highlighter-extension.git) repository.
 2. Open Google Chrome and go to `chrome://extensions/`
 3. Enable **Developer mode** (top-right corner)
 4. Click **Load unpacked**
