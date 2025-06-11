@@ -16,17 +16,17 @@ A lightweight Chrome extension that visually distinguishes between environments 
 
 ## 🖥 Supported Hostnames
 
-| Hostname                          | Environment | Color     |
-|----------------------------------|-------------|-----------|
-| `revplan.ideasrms.com`           | Production  | `#ffcccc` |
-| `revplan.stage.ideasrms.com`     | Staging     | `#fff4cc` |
-| `revplan.dev.ideasrms.com`       | Development | `#d5f5e3` |
+| Hostname                     | Environment | Color     |
+| ---------------------------- | ----------- | --------- |
+| `revplan.ideasrms.com`       | Production  | `#ffcccc` |
+| `revplan.stage.ideasrms.com` | Staging     | `#fff4cc` |
+| `revplan.dev.ideasrms.com`   | Development | `#d5f5e3` |
 
 ---
 
 ## 📦 How to Install Locally
 
-1. Clone or download this repository.
+1. Clone or download [this](https://github.com/yugalteotia/Env-highlighter-extension.git) repository.
 2. Open Google Chrome and go to `chrome://extensions/`
 3. Enable **Developer mode** (top-right corner)
 4. Click **Load unpacked**
@@ -41,9 +41,11 @@ That's it! The extension will now run on all supported environments.
 Want to support additional hostnames, change colors, or adjust banner styles?
 
 Edit the `env-highlighter.js` file inside the extension folder:
+
 ```js
 if (hostname === "your.custom.host.com") {
-    bgColor = "#yourColor";
-    label = "YOUR ENV";
-    shouldBlink = true;
+  bgColor = "#yourColor";
+  label = "YOUR ENV";
+  shouldBlink = true;
 }
+```
