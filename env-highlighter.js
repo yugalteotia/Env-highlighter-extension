@@ -30,7 +30,7 @@
         Object.assign(marker.style, {
             position: "fixed",
             left: "8px",
-            top: "35%",
+            top: "45%",
             zIndex: "9999",
             padding: "10px",
             backgroundColor: bgColor,
