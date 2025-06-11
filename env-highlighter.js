@@ -19,12 +19,6 @@
         label = "DEVELOPMENT";
     }
 
-    function adjustColor(color, amount) {
-        return "#" + color.replace(/^#/, "").replace(/../g, color =>
-            ("0" + Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).slice(-2)
-        );
-    }
-
     function addEnvLabel() {
         if (document.getElementById("env-label")) return;
 
@@ -32,7 +26,6 @@
         marker.id = "env-label";
 
         marker.innerHTML = label.split('').join('<br>');
-        const labelBgColor = adjustColor(bgColor, -30);
 
         Object.assign(marker.style, {
             position: "fixed",
@@ -40,16 +33,12 @@
             top: "35%",
             zIndex: "9999",
             padding: "10px",
-            backgroundColor: labelBgColor,
+            backgroundColor: bgColor,
             color: "#ffffff",
             fontWeight: "bold",
             fontSize: "30px",
             lineHeight: "1.2",
-            borderTopRightRadius: "8px",
-            borderTopLeftRadius: "8px",
-            borderBottomRightRadius: "8px",
-            borderBottomLeftRadius: "8px",
-            boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            borderRadius: "8px",
             textAlign: "center",
             pointerEvents: "none",
             whiteSpace: "pre-line"
